@@ -1,0 +1,557 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #007BFF;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #28a745;
+  padding: 10px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header .logo img {
+  height: 80px;
+  margin-right: 10px;
+align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1rem;
+}
+
+nav ul li a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #28a745;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Banner Section */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background: url('images/banner.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.banner-text {
+  background: rgba(0, 0, 0, 0.5); /* Optional overlay for better text visibility */
+  padding: 20px 40px;
+  border-radius: 10px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-style: italic;
+color: white;
+
+}
+
+/* Keyframe Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Prototype Section */
+.prototype {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.prototype h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.prototype .btn {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.prototype .btn:hover {
+  background-color: #218838;
+}
+
+/* Products Section */
+.products {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.products h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.product-card {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.product-card p {
+  color: #28a745;
+  font-size: 1.1rem;
+}
+
+.product-card .btn {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.product-card .btn:hover {
+  background-color: #218838;
+}
+
+.product-card .btn-outline {
+  padding: 10px 15px;
+  border: 1px solid #28a745;
+  background: none;
+  color: #28a745;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-card .btn-outline:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Payment Partners Section */
+.payment-partners {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.payment-partners h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.payment-partners .reveal {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.payment-partners img.payment-img {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.5s ease-in-out;
+  transform: scale(0.9);
+}
+
+.payment-partners img.payment-img:hover {
+  transform: scale(1.1);
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact address {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #28a745;
+  color: white;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: white;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/* About Us Section */
+.about {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.about-image {
+  margin-top: 30px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+/* General Styles for Policy Pages */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+}
+/* Content Section for Policy Pages */
+section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+section h3 {
+  margin-top: 20px;
+  font-size: 1.8em;
+  color: #444;
+}
+
+section p, section li {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+section ul {
+  padding-left: 20px;
+}
+
+section ul li {
+  margin-bottom: 10px;
+}
+/* Responsive Design for Policy Pages */
+@media (max-width: 768px) {
+section {
+    padding: 15px;
+    margin: 20px;
+  }
+nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  section h2 {
+    font-size: 2em;
+  }
+
+  section h3 {
+    font-size: 1.5em;
+  }
+
+  section p {
+    font-size: 15px;
+  }
+}
+/* Order Tracking Page Styles */
+#order-tracking {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#order-tracking h2 {
+  font-size: 2.5em;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+#order-tracking p {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+#order-tracking form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#order-tracking input[type="text"] {
+  padding: 10px;
+  width: 60%;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+#order-tracking button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#order-tracking button:hover {
+  background-color: #81c784;
+}
+
+#tracking-details {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px dashed #ccc;
+  border-radius: 5px;
+  display: none; /* Initially hidden */
+}
+
+#tracking-details.visible {
+  display: block;
+}
+
+#tracking-details h3 {
+  color: #2e7d32;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+#tracking-details p {
+  font-size: 1.2em;
+  color: #555;
+}
+/* 404 Page Specific Styles */
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 200px); /* Adjust height to fit between header and footer */
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.not-found-container h1 {
+  font-size: 6rem;
+  color: #2e7d32;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.not-found-container p {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.not-found-container button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #2e7d32;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.not-found-container button:hover {
+  background-color: #81c784;
+  transform: translateY(-2px);
+}
+
+.not-found-container a {
+  text-decoration: none;
+}

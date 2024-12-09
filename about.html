@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - GreenMorph</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="GreenMorph Logo">
+      GreenMorph
+    </div>
+    <nav>
+      <ul>
+         <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="order-traking.html">Track Order</a></li>
+
+      </ul>
+    </nav>
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <!-- About Us Section -->
+  <section class="about">
+    <h1>About Us</h1>
+    <div class="about-content">
+      <p>
+        GreenMorph is a sustainable startup focused on upcycling plastic waste into innovative and eco-friendly craft products. 
+        By blending creativity with environmental responsibility, GreenMorph aims to reduce plastic pollution while providing 
+        aesthetically pleasing and functional products.
+      </p>
+      <p>
+        At GreenMorph, we believe in the power of transformation. From discarded materials to beautifully crafted items, 
+        we are on a mission to turn waste into wonders. Our vision is to inspire individuals and communities to adopt 
+        sustainable practices and cherish the beauty of eco-friendly living.
+      </p>
+      <p>
+        Together, we can make a difference — one craft at a time.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="images/about-image.jpg" alt="About Us Banner">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>© 2024 GreenMorph | All Rights Reserved</strong></p>
+    <p>
+      <a href="terms.html">Terms & Conditions</a> | 
+      <a href="policy.html">Privacy Policy</a> | 
+      <a href="payment.html">Payment & Refund Policy</a> | 
+      <a href="shipping.html">Shipping Policy</a>
+    </p>
+  </footer>
+
+  <!-- JavaScript for Hamburger Menu -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

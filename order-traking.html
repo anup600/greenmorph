@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Tracking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="GreenMorph Logo">
+      GreenMorph
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="order-traking.html">Track Order</a></li>
+
+      </ul>
+    </nav>
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <section id="order-tracking">
+    <h2>Track Your Order</h2>
+    <p>Enter your order ID to check the status of your order.</p>
+    <p><strong><em>(ORDER ID IS YOUR MOBILE NO. LAST FOUR DIGIT AND THE LAST FOUR DIGIT OF THE SKU OF THE PRODUCT THAT YOU BUYED)</em></strong></p>
+    <form action="#" method="GET">
+      <input type="text" name="order-id" placeholder="Enter Order ID" required>
+      <button type="submit">Track</button>
+    </form>
+    <div id="tracking-details">
+      <!-- This section will dynamically show tracking details -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>© 2024 GreenMorph | All Rights Reserved</strong></p>
+    <p>
+      <a href="terms.html">Terms & Conditions</a> | 
+      <a href="policy.html">Privacy Policy</a> | 
+      <a href="payment.html">Payment & Refund Policy</a> | 
+      <a href="shipping.html">Shipping Policy</a>
+     
+    </p>
+  </footer>
+
+  <!-- JavaScript for Hamburger Menu -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+<script>
+  const form = document.querySelector('form');
+  const trackingDetails = document.getElementById('tracking-details');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const orderId = form.querySelector('input[name="order-id"]').value;
+
+    // Mock tracking details for specific Order ID
+    if (orderId === "60630001") {
+      trackingDetails.innerHTML = `
+        <h3>Order ID: ${orderId}</h3>
+        <p><strong>Name:</strong> Anup Singh</p>
+        <p><strong>Mobile No.:</strong> 9101256063</p>
+        <p><strong>Tracking ID:</strong> 123456789</p>
+        <p><strong><em>Go To This Website and Enter Tracking No.</em></strong></p>
+        <a href="https://www.indiapost.gov.in/_layouts/15/DOP.Portal.Tracking/TrackConsignment.aspx" target="_blank"> 
+          <button>Track Consignment</button>
+        </a>
+      `;
+    } else {
+      trackingDetails.innerHTML = `
+        <h3>Order ID: ${orderId}</h3>
+        <p><strong>Status:</strong> Not Found</p>
+        <p>Please check the entered Order ID and try again.</p>
+      `;
+    }
+    trackingDetails.classList.add('visible');
+  });
+</script>
+
+</body>
+</html>

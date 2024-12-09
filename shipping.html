@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipping Policy - GreenMorph</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="GreenMorph Logo">
+     GreenMorph
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="order-traking.html">Track Order</a></li>
+
+      </ul>
+    </nav>
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <!-- Shipping Policy Content -->
+  <section class="shipping-policy">
+    <h2>Shipping Policy</h2>
+    <p>Our Shipping Policy outlines the shipping methods, rates, and delivery times for orders placed on GreenMorph.</p>
+    
+    <h3>1. Shipping Methods</h3>
+    <p>We offer various shipping methods based on your location, including standard and expedited shipping options.</p>
+
+    <h3>2. Shipping Charges</h3>
+    <p>Shipping charges are calculated at checkout based on the delivery address and the weight of the items purchased.</p>
+
+    <h3>3. Delivery Time</h3>
+    <p>Delivery times vary depending on the shipping method chosen. Typical delivery times range from 5 to 10 business days for domestic shipments.</p>
+
+    <h3>4. International Shipping</h3>
+    <p>We currently do not offer international shipping. We are working on expanding our reach globally.</p>
+
+    <p>If you have any further questions about shipping, please feel free to contact us.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>© 2024 GreenMorph | All Rights Reserved</strong></p>
+    <p>
+      <a href="terms.html">Terms & Conditions</a> | 
+      <a href="policy.html">Privacy Policy</a> | 
+      <a href="payment.html">Payment & Refund Policy</a> | 
+      <a href="shipping.html">Shipping Policy</a>
+    </p>
+  </footer>
+<!-- JavaScript for Hamburger Menu -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

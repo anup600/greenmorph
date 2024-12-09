@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions - GreenMorph</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="GreenMorph Logo">
+     GreenMorph
+    </div>
+    <nav>
+      <ul>
+         <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="order-traking.html">Track Order</a></li>
+
+      </ul>
+    </nav>
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+
+  <!-- Terms & Conditions Content -->
+  <section class="terms">
+    <h2>Terms & Conditions</h2>
+    <p>Welcome to GreenMorph! These terms and conditions outline the rules and regulations for the use of our website and services.</p>
+    <h3>1. Introduction</h3>
+    <p>By accessing or using our website, you agree to comply with the terms set forth in this agreement.</p>
+
+    <h3>2. Product Information</h3>
+    <p>All product information, including prices, specifications, and availability, is subject to change without notice.</p>
+
+    <h3>3. Payment Terms</h3>
+    <p>We accept payments through various online platforms. Please refer to our Payment Policy for further details.</p>
+
+    <h3>4. Shipping and Delivery</h3>
+    <p>For detailed shipping policies, please refer to our Shipping Policy page.</p>
+
+    <h3>5. Returns and Refunds</h3>
+    <p>Refunds are subject to our Refund Policy. Please refer to the Payment & Refund Policy for more information.</p>
+
+    <h3>6. Privacy Policy</h3>
+    <p>Our privacy practices are described in our Privacy Policy, which governs the use of customer data.</p>
+
+    <p>By continuing to use our website, you accept all these terms and conditions.</p>
+  </section>
+
+   <!-- Footer -->
+  <footer>
+    <p><strong>© 2024 GreenMorph | All Rights Reserved</strong></p>
+    <p>
+      <a href="terms.html">Terms & Conditions</a> | 
+      <a href="policy.html">Privacy Policy</a> | 
+      <a href="payment.html">Payment & Refund Policy</a> | 
+      <a href="shipping.html">Shipping Policy</a>
+    </p>
+  </footer>
+<!-- JavaScript for Hamburger Menu -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
+
